@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="./DOM.js"></script> -->
+  <title>Ejemplo de llenado de clase</title>
+  <style>
+    .miEjemplo {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <!-- Los elementos con la clase "myClass" serán agregados aquí -->
+  </div>
+
+  <script>
+    // Obtener el contenedor
+    const container = document.getElementById('container');
+
+    // Crear elementos y agregar la clase "miEjemplo" con IDs diferentes
+    for (let i = 1; i <= 5; i++) {
+      const element = document.createElement('div');
+      element.textContent = `Elemento ${i}`;
+      element.className = 'miEjemplo';
+      element.id = `elemento${i}`; // Asignar un ID único
+
+      container.appendChild(element);
+    }
+  </script>
+</body>
+</html>
